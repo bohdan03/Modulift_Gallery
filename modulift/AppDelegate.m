@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Constant.h"
+#import  <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   // [Parse enableLocalDatastore];
+    [Parse setApplicationId:@"7mcC5157umkXldb5KmjxJBNutu2tZB8dXm63Xog0"
+                  clientKey:@"2WM56u3IFlNx9HC81epm7vSdraccv0wpn6CjuICa"];
+ //   [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 
@@ -52,6 +59,7 @@
 
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "DoubleDigital.modulift" in the application's documents directory.
+
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 

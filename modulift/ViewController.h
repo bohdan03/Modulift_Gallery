@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ViewController : UIViewController
 
+- (IBAction)m_btnSignIn:(id)sender;
+
+
+- (IBAction)m_btnForgotPassword:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *m_lblUserID;
+@property (weak, nonatomic) IBOutlet UITextField *m_lblUserPassword;
 
 @end
 
